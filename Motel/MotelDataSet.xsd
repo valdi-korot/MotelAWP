@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MotelDataSet" targetNamespace="http://tempuri.org/MotelDataSet.xsd" xmlns:mstns="http://tempuri.org/MotelDataSet.xsd" xmlns="http://tempuri.org/MotelDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MotelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MotelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Motel.Properties.Settings.GlobalReference.Default.MotelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewTypeTableAdapter" GeneratorDataComponentClassName="ViewTypeTableAdapter" Name="ViewType" UserDataComponentName="ViewTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MotelConnectionString (Settings)" DbObjectName="dbo.ViewType" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DateInsert, Type_number, FName, LName, MName FROM dbo.ViewType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DateInsert" DataSetColumn="DateInsert" />
+              <Mapping SourceColumn="Type_number" DataSetColumn="Type_number" />
+              <Mapping SourceColumn="FName" DataSetColumn="FName" />
+              <Mapping SourceColumn="LName" DataSetColumn="LName" />
+              <Mapping SourceColumn="MName" DataSetColumn="MName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MotelDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MotelDataSet" msprop:Generator_UserDSName="MotelDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewType" msprop:Generator_TableClassName="ViewTypeDataTable" msprop:Generator_TableVarName="tableViewType" msprop:Generator_TablePropName="ViewType" msprop:Generator_RowDeletingName="ViewTypeRowDeleting" msprop:Generator_RowChangingName="ViewTypeRowChanging" msprop:Generator_RowEvHandlerName="ViewTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewTypeRowDeleted" msprop:Generator_UserTableName="ViewType" msprop:Generator_RowChangedName="ViewTypeRowChanged" msprop:Generator_RowEvArgName="ViewTypeRowChangeEvent" msprop:Generator_RowClassName="ViewTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateInsert" msprop:Generator_ColumnVarNameInTable="columnDateInsert" msprop:Generator_ColumnPropNameInRow="DateInsert" msprop:Generator_ColumnPropNameInTable="DateInsertColumn" msprop:Generator_UserColumnName="DateInsert" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Type_number" msprop:Generator_ColumnVarNameInTable="columnType_number" msprop:Generator_ColumnPropNameInRow="Type_number" msprop:Generator_ColumnPropNameInTable="Type_numberColumn" msprop:Generator_UserColumnName="Type_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FName" msprop:Generator_ColumnVarNameInTable="columnFName" msprop:Generator_ColumnPropNameInRow="FName" msprop:Generator_ColumnPropNameInTable="FNameColumn" msprop:Generator_UserColumnName="FName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LName" msprop:Generator_ColumnVarNameInTable="columnLName" msprop:Generator_ColumnPropNameInRow="LName" msprop:Generator_ColumnPropNameInTable="LNameColumn" msprop:Generator_UserColumnName="LName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MName" msprop:Generator_ColumnVarNameInTable="columnMName" msprop:Generator_ColumnPropNameInRow="MName" msprop:Generator_ColumnPropNameInTable="MNameColumn" msprop:Generator_UserColumnName="MName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
